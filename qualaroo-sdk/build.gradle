@@ -35,11 +35,11 @@ android {
                 abortOnError true
                 disable 'InvalidPackage'
             }
-            buildConfigField("long", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("long", "VERSION_CODE", "3")
             buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")        }
         debug {
             minifyEnabled false
-            buildConfigField("long", "VERSION_CODE", "${defaultConfig.versionCode}")
+            buildConfigField("long", "VERSION_CODE", "3")
             buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
         }
     }
@@ -86,7 +86,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testImplementation 'org.mockito:mockito-core:4.7.0'
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0'
     testImplementation 'junit:junit:4.13.2'
